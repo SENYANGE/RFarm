@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RFarm</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="toolbar_title">R Farm</string>
+    <string name="about">About RFarm App"\n"All About Rabbitry</string>
+
+
+</resources>

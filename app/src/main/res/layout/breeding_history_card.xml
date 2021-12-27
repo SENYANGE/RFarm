@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardElevation="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="323dp"
+        android:background="@drawable/bunnies_card_back"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="119dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/bunny1" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue"
+                android:padding="2dp"
+                android:text="Doe name:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/red"
+                android:padding="2dp"
+                android:text="Buck name:" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:padding="2dp"
+                android:text="DOB: " />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/blue"
+                android:padding="2dp"
+                android:text="Number of Bunnies: " />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/purple_500"
+                android:padding="2dp"
+                android:text="Alive Bunnies: " />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:padding="2dp"
+                android:text="Sold Bunnies: " />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@color/red"
+                android:padding="2dp"
+                android:text="Dead Bunnies: "
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

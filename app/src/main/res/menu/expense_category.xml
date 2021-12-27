@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:title="Select Expense Type"
+        android:icon="@drawable/app_log"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/feeds"
+                android:icon="@drawable/grass"
+                android:title="Feeds" />
+            <item
+                android:id="@+id/housing"
+                android:icon="@drawable/housing"
+                android:title="Housing" />
+            <item
+                android:id="@+id/medical"
+                android:icon="@drawable/medical"
+                android:title="Medication" />
+            <item
+                android:id="@+id/otherss"
+                android:icon="@drawable/ic_baseline_info_24"
+                android:title="Others" />
+        </menu>
+    </item>
+</menu>

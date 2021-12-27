@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+    <item android:title="GetStarted">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_baseline_home_24"
+                    android:iconTint="@color/white"
+                    android:title="Home"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="Inventory">
+    <menu>
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_message_id"
+            android:icon="@drawable/doesbucks"
+            android:title="Does and Bucks" />
+
+        <item
+            android:id="@+id/nav_photos_id"
+            android:title="Breeding"
+            android:icon="@drawable/breeding"
+            />
+
+        <item
+            android:id="@+id/nav_profile_id"
+            android:icon="@drawable/sales"
+            android:title="Sales" />
+        <item
+            android:id="@+id/nav_notebooks_id"
+            android:title="Expenses"
+            android:icon="@drawable/expenses"
+            />
+    </group>
+    </menu>
+    </item>
+
+    <item android:title="My Records">
+        <menu>
+            <item
+                android:id="@+id/nav_send_id"
+                android:icon="@drawable/herd"
+                android:title="Herd" />
+            <item
+                android:id="@+id/nav_chat_id"
+                android:icon="@drawable/bunnies"
+                android:title="Bunnies" />
+            <item
+                android:id="@+id/nav_settings_id"
+                android:title="Sales"
+                android:icon="@drawable/sales_records"
+                />
+
+            <item
+                android:id="@+id/nav_share_id"
+                android:icon="@drawable/exp_records"
+                android:title="Expenses" />
+
+            <item
+                android:id="@+id/nav_trash_id"
+                android:title="Breeding History"
+                android:icon="@drawable/breedinghistory"
+                />
+        </menu>
+    </item>
+
+    <item android:title="Others">
+        <menu>
+
+            <item
+                android:id="@+id/nav_darkmode_id"
+                android:title="About RFarm"
+                android:icon="@drawable/rfarmicon"
+                                />
+            <item
+                android:id="@+id/nav_signout_id"
+                android:title="Signout"
+                android:icon="@drawable/power"
+                
+                />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bunnies_card_back"
+    tools:context=".BreedingRabbits"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout_id"
+    tools:openDrawer="start">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_id"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/blue"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                android:elevation="4dp"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Container for the rest of the screen - Below the Toolbar -->
+        <FrameLayout
+            android:id="@+id/framelayout_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="71dp">
+
+                <Button
+                    android:id="@+id/select_doer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/blue"
+                    android:text="Doe"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/select_buck"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@color/red"
+
+                    android:text="Buck"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp"
+                android:text="Select Mating Breeds"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="100dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="119dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/doerImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:src="@drawable/bunny1" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/buckImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:src="@drawable/bunny1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+android:layout_marginTop="250dp"
+                android:background="@color/white"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteY="269dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:background="#f8f8ff"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/doer_rabbit_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/doer_breed_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:textColor="@color/blue"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:background="#f0f8ff"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/buck_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:textColor="@color/red"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/buck_breed_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+
+                        android:textColor="@color/red"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/save_mating"
+                android:layout_width="208dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/card_border"
+
+                android:text="Save Mating Details"
+                android:textColor="@color/blue"
+                tools:layout_editor_absoluteX="102dp"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <Button
+                android:id="@+id/family_both_breeds"
+                android:layout_width="275dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="450dp"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/circular_btn"
+                android:drawableLeft="@drawable/ic_baseline_history_edu_24"
+
+                android:text="More information(Family Tree)"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="541dp" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#8992FB"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_navigation"
+        app:headerLayout="@layout/nav_header"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

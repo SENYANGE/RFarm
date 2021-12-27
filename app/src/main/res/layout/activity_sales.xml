@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Sales"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_id"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/blue"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                android:elevation="4dp"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Container for the rest of the screen - Below the Toolbar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="56dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="57dp"
+                android:layout_marginBottom="18dp"
+                android:text="Other Sales"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="12dp"
+                android:text="Select Sales Category"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <CheckBox
+                android:id="@+id/fertilizers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="49dp"
+                android:layout_marginBottom="24dp"
+                android:onClick="checkBoxAlt"
+                android:text="Droppings and Urine"
+                app:layout_constraintBottom_toTopOf="@+id/skins"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <CheckBox
+                android:id="@+id/skins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="139dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="checkBoxAlt"
+                android:text="Skins"
+                app:layout_constraintBottom_toTopOf="@+id/meat"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <CheckBox
+                android:id="@+id/meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="checkBoxAlt"
+                android:text="Meat"
+                app:layout_constraintBottom_toTopOf="@+id/cages"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+            <CheckBox
+                android:id="@+id/cages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="21dp"
+                android:onClick="checkBoxAlt"
+                android:text="cages"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                app:layout_constraintBottom_toTopOf="@+id/save_other_sales"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cages">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/other_sales_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/save_other_sales"
+                android:layout_width="211dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="146dp"
+                android:drawableLeft="@mipmap/money"
+                android:elevation="5dp"
+                android:text="Proceed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="41dp"
+                android:drawableLeft="@mipmap/mating"
+                android:elevation="5dp"
+                android:text="Doe or Buck"
+                app:layout_constraintBottom_toTopOf="@+id/button3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fertilizers"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="24dp"
+                android:drawableLeft="@mipmap/bunny_"
+                android:drawablePadding="10dp"
+                android:elevation="5dp"
+                android:text="Bunny"
+                app:layout_constraintBottom_toTopOf="@+id/meat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/skins"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#8992FB"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_navigation"
+        app:headerLayout="@layout/nav_header"/>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/bunnies_card_back"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/parent_doer"
+                android:layout_width="116dp"
+                android:layout_height="88dp"
+                android:src="@drawable/bunny1" />
+
+            <LinearLayout
+                android:layout_width="279dp"
+                android:layout_height="103dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/parent_doer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Doe name"
+                    android:textColor="@color/blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/doer_brth_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Birth Date" />
+
+                <TextView
+                    android:id="@+id/buck_name_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buck name"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/no_bunnies_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="Bunnies: 6"
+                    android:textColor="#137808" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:text="Alive Bunnies"
+                android:textColor="#15B80A"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="200dp"
+                android:layout_marginEnd="10dp"
+                android:text="Dead Bunnies"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alive_bunnies"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:text="5"
+
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/dead_bunnies"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="260dp"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:text="1"
+                android:textAlignment="center"
+
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

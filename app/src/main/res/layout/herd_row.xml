@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="5dp"
+    android:background="@drawable/card_border"
+    card_view:contentPadding="5dp"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardMaxElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bunnies_card_back">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rab_image_row"
+            android:layout_width="213dp"
+            android:layout_height="240dp"
+            android:elevation="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/bunny1" />
+
+        <TextView
+            android:id="@+id/her_row_rabtag"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@+id/rab_image_row"
+            android:background="@color/blue"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:text="Rabbit tag"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/alive_dead"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/her_row_rabtag"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="18dp"
+            android:editable="false"
+            android:checked="false"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/rab_image_row"
+            android:elevation="5dp"
+            android:text="Alive or Dead" />
+
+        <RadioButton
+            android:id="@+id/radio_sex"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:editable="false"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="29dp"
+            android:elevation="5dp"
+            android:checked="false"
+            android:gravity="center"
+            android:text="sex" />
+
+        <TextView
+            android:id="@+id/card_breed"
+            android:layout_width="154dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:paddingLeft="25dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="66dp"
+            android:gravity="center"
+            android:elevation="5dp"
+            android:text="breed" />
+
+        <RadioButton
+            android:id="@+id/radio_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/blue"
+            android:checked="false"
+            android:editable="false"
+            android:elevation="5dp"
+            android:text="Sold or not sold"
+
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
